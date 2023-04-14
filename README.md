@@ -58,4 +58,6 @@ The inspector is a great tool for finding accessibility ids and to test whether 
 7. Open the simulator/ emulator if it is not already open.
 8. Click the `Start Session` button on the bottom right of `Appium Inspector`.
 
-_Note: For convenience, you can save capability sets. This will make it easier to switch between devices._
+_Note: For convenience, there is a saved session that can be used as a starting point. It's called `inspector.appiumsession`
+To use it, go to `File -> Open` and select the file from the repo root. You will need to update the
+path to the app files._
