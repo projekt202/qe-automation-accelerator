@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "outDir": "./.tsbuild/",
+        "sourceMap": false,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "target": "es2022",
+        "types": [
+            "@wdio/appium-service",
+            "@wdio/globals/types",
+            "@wdio/mocha-framework",
+            "node"
+        ]
+    },
+    "include": [
+      "./config/**/*.ts",
+      "./test/**/*.ts"
+    ]
+}
