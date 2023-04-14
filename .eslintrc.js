@@ -21,7 +21,7 @@ module.exports = {
   },
   rules: {
     semi: ['error', 'always'],
-    indent: [2],
+    indent: ['error', 2],
     'no-multiple-empty-lines': [ 2, { 'max': 1, 'maxEOF': 1 } ],
     'array-bracket-spacing': [ 'error', 'never' ],
     'brace-style': [ 'error', '1tbs', { allowSingleLine: true } ],

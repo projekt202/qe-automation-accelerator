@@ -1,3 +1,4 @@
+import Menu from './Components/Menu';
 import Screen from './Screen';
 
 class CatalogScreen extends Screen {
@@ -5,12 +6,10 @@ class CatalogScreen extends Screen {
     super('~Catalog-screen');
   }
 
-  get catalogMenuButton () {
-    return $('~Catalog-tab-item');
-  }
-
   async open () {
-    await (await this.catalogMenuButton).click();
+    if (browser.isIOS) {
+      await (await Menu.catalogButton).click();
+    }
     return super.waitForIsShown(true);
   }
 

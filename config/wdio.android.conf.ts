@@ -9,6 +9,7 @@ export const config: Options.Testrunner = {
       maxInstances: 1,
       platformName: 'Android',
       'appium:app': join(process.cwd(), './MyDemoApp.apk'),
+      'appium:appWaitActivity': 'com.saucelabs.mydemoapp.android.view.activities.*',
       'appium:automationName': 'UIAutomator2',
       'appium:deviceName': 'Pixel_5_API_33',
       'appium:noReset': false,

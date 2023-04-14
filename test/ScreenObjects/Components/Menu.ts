@@ -1,12 +1,14 @@
-import Screen from '../Screen';
-
 class Menu {
+  get menuButton() {
+    return $('~View menu');
+  }
+
   get catalogButton() {
     return $('~Catalog-tab-item');
   }
 
   get cartButton() {
-    return $('~Cart-tab-item');
+    return $(browser.isIOS ? '~Cart-tab-item' : '~View cart');
   }
 
   get moreButton() {
@@ -26,7 +28,11 @@ class Menu {
   }
 
   async waitForMenuToBeShown(): Promise<boolean | void> {
-    return (await this.cartButton).waitForDisplayed({ timeout: 5000 });
+    if (browser.isIOS) {
+      return (await this.cartButton).waitForDisplayed({ timeout: 5000 });
+    }
+    return (await this.menuButton).waitForDisplayed({ timeout: 5000 });
+
   }
 }
 
